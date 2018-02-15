@@ -1,0 +1,11 @@
+---
+applications:
+- name: ocr
+  memory: 128M
+  instances: 1
+  buildpack: python_buildpack
+  host: ocr
+  env:
+    PATH: /bin:/usr/bin:/home/vcap/app/bin
+    LD_LIBRARY_PATH: /home/vcap/app/libs
+    TESSDATA_PREFIX: /home/vcap/app/share
